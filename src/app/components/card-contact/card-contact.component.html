@@ -1,11 +1,33 @@
-<div class="contact">
-  <img [src]="contactList.image" alt="">
-  <p>{{ contactList.id }}</p>
-  <p>{{ contactList.first_name }}</p>
-  <p>{{ contactList.last_name }}</p>
-  <p>{{ contactList.role }}</p>
-  <p>{{ contactList.phone }}</p>
-  <p>{{ contactList.email }}</p>
-  <p>{{ contactList.car_make }}</p>
-  <p>{{ contactList.car_model }}</p>
+<div class="card m-1 bg-light text-center">
+  <img class="card-img-top p-4" [src]="contactList.image"
+    alt="Image of {{ contactList.car_make }} - {{ contactList.car_model }}">
+
+  <div class="card-body">
+    <h5 class="card-title">{{ contactList.first_name }} {{ contactList.last_name }}</h5>
+    <div class="container">
+      <p *ngIf="contactList.role;else desconocido" class="contact-type"
+        [ngClass]="{'comprador' : contactList.role == 'comprador', 'vendedor' : contactList.role == 'vendedor'}">
+        {{ contactList.role }}
+      </p>
+      <!-- Si no tiene rol mostramos Desconocido con el color establecido en las especificaciones -->
+      <ng-template #desconocido>
+        <p v-else class="contact-type" style="background: lightcoral">desconocido</p>
+      </ng-template>
+    </div>
+
+    <div class="car-info" *ngIf="contactList.car_make && contactList.car_model">
+      <p class="card-text">{{ contactList.car_make }}</p>
+      <p class="card-text">{{ contactList.car_model }}</p>
+    </div>
+  </div>
+
+  <div class="row row-cols-2">
+    <!-- Desactivamos el botón si no tiene email o telf -->
+    <button class="col" [attr.disabled]="!contactList.email" (click)="showEmail()">
+      <i class="bi bi-envelope-fill"></i> Email
+    </button>
+    <button class="col vertical-line" [attr.disabled]="!contactList.phone" (click)="showPhone()">
+      <i class="bi bi-telephone-fill"></i> Call
+    </button>
+  </div>
 </div>

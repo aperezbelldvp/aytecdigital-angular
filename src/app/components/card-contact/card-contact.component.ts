@@ -15,4 +15,12 @@ export class CardContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showEmail(): void {
+    alert(this.contactList.email)
+  }
+
+  showPhone(): void {
+    alert(this.contactList.phone)
+  }
+
 }

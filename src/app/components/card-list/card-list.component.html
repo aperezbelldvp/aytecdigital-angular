@@ -1,3 +1,9 @@
-<div class="container">
-  <app-card-contact *ngFor="let contact of contacts" [contactList]="contact"></app-card-contact>
+<div class="container w-auto">
+  <div class="row">
+    <app-card-contact class="col car-card"
+      *ngFor="let contact of contacts;"
+      [contactList]="contact"
+      >
+    </app-card-contact>
+  </div>
 </div>
