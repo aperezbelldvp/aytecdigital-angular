@@ -6,6 +6,7 @@ import { HeaderWebComponent } from './components/header-web/header-web.component
 import { FooterWebComponent } from './components/footer-web/footer-web.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { CardContactComponent } from './components/card-contact/card-contact.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { CardContactComponent } from './components/card-contact/card-contact.com
     CardContactComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

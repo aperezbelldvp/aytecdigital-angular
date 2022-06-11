@@ -1,1 +1,3 @@
-<app-card-contact></app-card-contact>
+<div class="container">
+  <app-card-contact *ngFor="let contact of contacts" [contactList]="contact"></app-card-contact>
+</div>

@@ -1,0 +1,87 @@
+[{
+        "id": 1,
+        "first_name": "Rogers",
+        "last_name": "Stollenwerck",
+        "phone": "667789890",
+        "email": "rstollenwerck0@netvibes.com",
+        "car_model": "Express 2500",
+        "car_make": "Chevrolet",
+        "image": "https://cdn.pixabay.com/photo/2013/07/13/11/44/car-158548_1280.png"
+    },
+    {
+        "id": 2,
+        "first_name": "Van",
+        "last_name": "Goady",
+        "phone": "667789890",
+        "email": "vgoady1@msu.edu",
+        "car_model": "FX",
+        "car_make": "Infiniti",
+        "image": ""
+    },
+    {
+        "id": 3,
+        "first_name": "Ainslie",
+        "last_name": "McConachie",
+        "email": "amcconachie2@etsy.com",
+        "role": "vendedor",
+        "phone": "667749890",
+        "car_model": "Mirage",
+        "car_make": "Mitsubishi",
+        "image": "https://cdn.pixabay.com/photo/2013/07/12/15/02/mitsubishi-149283_1280.png"
+    },
+    {
+        "id": 4,
+        "first_name": "Shurlocke",
+        "last_name": "Brayshaw",
+        "phone": "667783890",
+        "role": "comprador",
+        "email": "sbrayshaw3@shop-pro.jp",
+        "car_model": "8 Series",
+        "car_make": "BMW",
+        "image": "https://cdn.pixabay.com/photo/2013/07/13/11/48/bmw-158703_1280.png"
+    },
+    {
+        "id": 5,
+        "first_name": "Frasquito",
+        "last_name": "Blaby",
+        "phone": "667749890",
+        "role": "vendedor",
+        "email": "",
+        "car_model": "Mustang",
+        "car_make": "Ford",
+        "image": "https://cdn.pixabay.com/photo/2013/07/13/01/07/ford-mustang-155132_1280.png"
+    },
+    {
+        "id": 6,
+        "first_name": "",
+        "last_name": "",
+        "phone": "667709890",
+        "role": "comprador",
+        "email": "jdegouy5@merriam-webster.com",
+        "car_model": "Optima",
+        "car_make": "Kia",
+        "image": "http://dummyimage.com/133x100.png/cc0000/ffffff"
+    },
+    {
+        "id": 7,
+        "first_name": "Daisie",
+        "last_name": "Parbrook",
+        "phone": "667740890",
+        "role": "vendedor",
+        "email": "dparbrook6@amazon.com",
+        "car_model": "Range Rover",
+        "car_make": "Land Rover",
+        "image": "https://cdn.pixabay.com/photo/2021/11/13/12/11/car-6791138_1280.png"
+    },
+    {
+        "id": 8,
+        "first_name": "Carina",
+        "last_name": "Schutter",
+        "phone": "667749890",
+        "role": "vendedor",
+        "email": "",
+        "car_model": "kia",
+        "car_make": "KIA",
+        "image": "https://cdn.pixabay.com/photo/2019/07/01/07/24/car-4309348_1280.png"
+    }
+]
