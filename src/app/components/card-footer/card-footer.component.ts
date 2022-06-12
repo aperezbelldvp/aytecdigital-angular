@@ -15,11 +15,11 @@ export class CardFooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showEmail(): void {
+  protected showEmail(): void {
     window.location.href = `mailto:${this.contactList.email}`
   }
 
-  showPhone(): void {
+  protected showPhone(): void {
     window.open(`tel:${this.contactList.phone}`)
   }
 

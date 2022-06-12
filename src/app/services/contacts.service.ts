@@ -12,7 +12,7 @@ export class ContactsService {
 
    }
 
-   readContacts(): Observable<Contact[]> {
-     return this.http.get<Contact[]>('./assets/data.json')
-   }
+  readContacts(url: string): Observable<Contact[]> {
+    return this.http.get<Contact[]>(url);
+  }
 }

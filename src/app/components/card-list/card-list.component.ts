@@ -9,12 +9,19 @@ import { ContactsService } from 'src/app/services/contacts.service';
   providers: [ContactsService],
 })
 export class CardListComponent implements OnInit {
-  contacts: Array<Contact> = new Array<Contact>();
+  protected contacts: Array<Contact> = new Array<Contact>();
+  private urlJson : string = 'https://api.npoint.io/81747a40d85d905c4c23';
 
-  constructor(private contactService: ContactsService) {}
+  constructor(private contactService: ContactsService) {
+
+  }
 
   ngOnInit(): void {
-    this.contactService.readContacts().subscribe((contacts: Contact[]) => {
+    this.loadContacts()
+  }
+
+  public loadContacts() {
+    this.contactService.readContacts(this.urlJson).subscribe((contacts: Contact[]) => {
       this.contacts = contacts.filter(
         (contact) =>
           (contact.first_name.length > 0 && contact.last_name.length > 0)
