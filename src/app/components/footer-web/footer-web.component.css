@@ -6,10 +6,7 @@ p{
   margin-top: 10px;
 }
 .footer {
-  background-color: black;
+  background-color: #e53935;
   color: #066dd5;
-}
-.footer-copy {
-  background-color: rgba(0, 0, 0, 0.2);
 }
 

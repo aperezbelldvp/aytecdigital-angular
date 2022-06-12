@@ -1,9 +1,17 @@
-.header {
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.85);
+img {
+  height: 150px;
+  width: 250px;
+  object-fit: scale-down;
+  margin-right: -70px;
+  margin-top: -60px;
 }
 
-h1 {
+span {
   font-size: 4rem;
-  color: #066DD5;
+  color: white;
+}
+
+.header {
+  padding-top: 1.5rem;
+  background-color: #e53935;
 }
