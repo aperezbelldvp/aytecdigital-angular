@@ -1,6 +1,7 @@
 button {
   border: none;
   padding: 1rem;
+  background: transparent ;
 }
 
 .vertical-line {
