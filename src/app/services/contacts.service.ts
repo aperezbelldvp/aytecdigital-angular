@@ -4,15 +4,18 @@ import { Observable } from 'rxjs';
 import { Contact } from '../models/contacts-model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ContactsService {
-  contact: Contact = new Contact()
+  contact: Contact = new Contact();
   constructor(private http: HttpClient) {
+  }
 
-   }
+  private readContacts(url: string): Observable<Contact[]> {
+     return this.http.get<Contact[]>(url);
+  }
 
-  readContacts(url: string): Observable<Contact[]> {
-    return this.http.get<Contact[]>(url);
+  public getReadContacts(url: string): Observable<Contact[]> {
+    return this.readContacts(url);
   }
 }

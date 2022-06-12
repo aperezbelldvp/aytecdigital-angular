@@ -10,7 +10,7 @@ import { ContactsService } from 'src/app/services/contacts.service';
 })
 export class CardListComponent implements OnInit {
   protected contacts: Array<Contact> = new Array<Contact>();
-  private urlJson : string = 'https://api.npoint.io/81747a40d85d905c4c23';
+  private urlJson : string = 'http://localhost:4200/assets/data.json';
 
   constructor(private contactService: ContactsService) {
 
@@ -21,7 +21,7 @@ export class CardListComponent implements OnInit {
   }
 
   public loadContacts() {
-    this.contactService.readContacts(this.urlJson).subscribe((contacts: Contact[]) => {
+    this.contactService.getReadContacts(this.urlJson).subscribe((contacts: Contact[]) => {
       this.contacts = contacts.filter(
         (contact) =>
           (contact.first_name.length > 0 && contact.last_name.length > 0)
