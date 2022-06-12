@@ -2,8 +2,6 @@ img {
   height: 150px;
   width: 250px;
   object-fit: scale-down;
-  margin-right: -70px;
-  margin-top: -60px;
 }
 
 span {
@@ -12,6 +10,5 @@ span {
 }
 
 .header {
-  padding-top: 1.5rem;
   background-color: #e53935;
 }
