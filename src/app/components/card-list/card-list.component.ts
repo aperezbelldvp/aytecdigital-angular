@@ -6,26 +6,19 @@ import { ContactsService } from 'src/app/services/contacts.service';
   selector: 'app-card-list',
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.css'],
-  providers: [ContactsService]
+  providers: [ContactsService],
 })
 export class CardListComponent implements OnInit {
-
   contacts: Array<Contact> = new Array<Contact>();
 
-  constructor(private contactService: ContactsService) {
-
-   }
+  constructor(private contactService: ContactsService) {}
 
   ngOnInit(): void {
     this.contactService.readContacts().subscribe((contacts: Contact[]) => {
-      this.contacts = contacts
-    })
+      this.contacts = contacts.filter(
+        (contact) =>
+          (contact.first_name.length > 0 && contact.last_name.length > 0)
+      );
+    });
   }
-
-  showCard(contact : Contact) : boolean {
-    if(contact.first_name && contact.last_name) return true
-    return false
-  }
-
-
 }

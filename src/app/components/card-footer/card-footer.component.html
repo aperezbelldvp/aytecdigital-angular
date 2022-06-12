@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row row-cols-2">
   <!-- Desactivamos el botón si no tiene email o telf -->
-  <button class="col w-100" [disabled]="!contactList.email" (click)="showEmail()">
+  <button class="col" [disabled]="!contactList.email" (click)="showEmail()">
     <i class="bi bi-envelope-fill"></i> Email
   </button>
-  <button class="col w-100 vertical-line" [disabled]="!contactList.phone" (click)="showPhone()">
+  <button class="col vertical-line" [disabled]="!contactList.phone" (click)="showPhone()">
     <i class="bi bi-telephone-fill"></i> Call
   </button>
 </div>

@@ -16,11 +16,11 @@ export class CardFooterComponent implements OnInit {
   }
 
   showEmail(): void {
-    alert(this.contactList.email)
+    window.location.href = `mailto:${this.contactList.email}`
   }
 
   showPhone(): void {
-    alert(this.contactList.phone)
+    window.open(`tel:${this.contactList.phone}`)
   }
 
 }
