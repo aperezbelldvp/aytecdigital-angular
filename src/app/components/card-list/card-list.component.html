@@ -1,9 +1,17 @@
-<div class="container w-auto">
-  <div class="row">
-    <app-card-contact class="col car-card"
-      *ngFor="let contact of contacts;"
-      [contactList]="contact"
-      >
-    </app-card-contact>
+<div class="container">
+  <div class="row" *ngFor="let contact of contacts;">
+    <div class="col" >
+      <div class="card bg-light mb-4" *ngIf="showCard(contact)">
+        <div class="card-img-top p-4">
+          <app-card-header [contactList]="contact"></app-card-header>
+        </div>
+        <div class="card-body">
+          <app-card-body [contactList]="contact"></app-card-body>
+        </div>
+        <div class="card-footer">
+          <app-card-footer [contactList]="contact"></app-card-footer>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

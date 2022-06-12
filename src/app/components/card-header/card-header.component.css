@@ -1,0 +1,6 @@
+img {
+  margin: auto;
+  height: 150px;
+  width: 250px;
+  object-fit: scale-down;
+}

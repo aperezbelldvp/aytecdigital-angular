@@ -1,21 +1,3 @@
-button {
-  border: none;
-  border-top: 1px solid #CCD1D1;
-  padding: 1rem;
-}
-
-img {
-  margin: auto;
-  height: 150px;
-  width: 250px;
-  object-fit: scale-down;
-}
-
-.vertical-line {
-  border-left: solid 1px #CCD1D1;
-  height: auto;
-}
-
 .contact-type {
   color: white;
   margin: 1rem auto;

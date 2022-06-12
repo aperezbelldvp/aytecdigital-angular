@@ -1,0 +1,22 @@
+<h5 class="card-title">{{ contactList.first_name }} {{ contactList.last_name }}</h5>
+<div class="container" [ngSwitch]="contactList.role">
+  <p *ngIf="contactList.role;else unknown" class="contact-type"
+    [ngClass]="{'comprador' : contactList.role == 'comprador', 'vendedor' : contactList.role == 'vendedor'}">
+    {{ contactList.role }}
+  </p>
+  <!-- Si no tiene rol mostramos Desconocido con el color establecido en las especificaciones -->
+  <ng-template #unknown>
+    <p v-else class="contact-type" style="background: lightcoral">desconocido</p>
+  </ng-template>
+</div>
+
+<div class="car-info">
+  <div *ngIf="contactList.car_make && contactList.car_model;else noCarInfo">
+    <p class="card-text">{{ contactList.car_make }}</p>
+    <p class="card-text">{{ contactList.car_model }}</p>
+  </div>
+  <ng-template #noCarInfo>
+    <p v-else>Desconocemos la marca</p>
+    <p v-else>Desconocemos el modelo</p>
+  </ng-template>
+</div>

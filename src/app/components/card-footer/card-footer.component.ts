@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Contact } from 'src/app/models/contacts-model';
 
 @Component({
-  selector: 'app-card-contact',
-  templateUrl: './card-contact.component.html',
-  styleUrls: ['./card-contact.component.css']
+  selector: 'app-card-footer',
+  templateUrl: './card-footer.component.html',
+  styleUrls: ['./card-footer.component.css']
 })
-export class CardContactComponent implements OnInit {
+export class CardFooterComponent implements OnInit {
 
   @Input() contactList: Contact
 

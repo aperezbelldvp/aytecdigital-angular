@@ -22,6 +22,10 @@ export class CardListComponent implements OnInit {
     })
   }
 
+  showCard(contact : Contact) : boolean {
+    if(contact.first_name && contact.last_name) return true
+    return false
+  }
 
 
 }
