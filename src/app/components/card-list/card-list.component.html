@@ -1,16 +1,30 @@
 <div class="container">
+  <!-- Con bootstrap adaptamos a distintas resoluciones -->
   <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4" >
-    <div class="col" *ngFor="let contact of contacts">
+    <!-- Utilizamos ngFor para ir mostrando todas las tarjetas. Usamos las animaciones -->
+    <div class="col animate__animated animate__fadeInUp" *ngFor="let contact of contacts">
       <div class="card h-100 bg-light" >
+        <!-- Header de la tarjeta que incluye la imágen -->
         <div class="card-img-top p-4">
           <app-card-header [contactList]="contact"></app-card-header>
         </div>
+        <!-- Fin header tarjeta -->
+
+        <!-- Body de la tarjeta que incluye:
+              - Nombre y apellido
+              - Role
+              - Marca y modelo
+          -->
         <div class="card-body">
           <app-card-body [contactList]="contact"></app-card-body>
         </div>
+        <!-- Fin body tarjeta -->
+
+        <!-- Footer de la tarjeta que incluye botones de email y llamada -->
         <div class="card-footer">
           <app-card-footer [contactList]="contact"></app-card-footer>
         </div>
+        <!-- Fin footer tarjeta -->
       </div>
     </div>
   </div>

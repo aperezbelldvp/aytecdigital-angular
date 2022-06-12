@@ -9,23 +9,27 @@ import { ContactsService } from 'src/app/services/contacts.service';
   providers: [ContactsService],
 })
 export class CardListComponent implements OnInit {
+  /* Array de contactos para mostrar en las tarjetas */
   protected contacts: Array<Contact> = new Array<Contact>();
-  private urlJson : string = 'http://localhost:4200/assets/data.json';
+  /* URL de la data. En este caso del data.json */
+  private urlJson: string = 'http://localhost:4200/assets/data.json';
 
-  constructor(private contactService: ContactsService) {
-
-  }
+  constructor(private contactService: ContactsService) {}
 
   ngOnInit(): void {
-    this.loadContacts()
+    this.loadContacts();
   }
-
-  public loadContacts() {
-    this.contactService.getReadContacts(this.urlJson).subscribe((contacts: Contact[]) => {
-      this.contacts = contacts.filter(
-        (contact) =>
-          (contact.first_name.length > 0 && contact.last_name.length > 0)
-      );
-    });
+  /* loadContacts queda pendiente de los cambios del json con subscribe,
+      filtra los contactos por aquellos que tienen nombre y apellido y
+      lo guarda en el array de contactos de esta clase. */
+  protected loadContacts() {
+    this.contactService
+      .getReadContacts(this.urlJson)
+      .subscribe((contacts: Contact[]) => {
+        this.contacts = contacts.filter(
+          (contact) =>
+            contact.first_name.length > 0 && contact.last_name.length > 0
+        );
+      });
   }
 }

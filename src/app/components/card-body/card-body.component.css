@@ -1,3 +1,7 @@
+span{
+  font-weight: bold;
+}
+
 .contact-type {
   color: white;
   margin: 1rem auto;
@@ -15,4 +19,13 @@
 
 .vendedor {
   background: lightskyblue;
+}
+
+.card-text {
+  font-style: italic;
+}
+
+.card-unknown {
+  color: red;
+  font-style: italic;
 }

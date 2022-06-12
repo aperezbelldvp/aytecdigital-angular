@@ -1,3 +1,4 @@
+/* Model de el tipo de contacto que existe en el data.json */
 export class Contact {
   id: number;
   first_name: string;

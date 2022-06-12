@@ -1,5 +1,8 @@
+<!-- Nombre y apellido del contacto -->
 <h5 class="card-title">{{ contactList.first_name }} {{ contactList.last_name }}</h5>
-<div class="container" [ngSwitch]="contactList.role">
+
+<div class="container">
+  <!-- Si tiene rol usamos ngClass para asignarle el estilo -->
   <p *ngIf="contactList.role;else unknown" class="contact-type"
     [ngClass]="{'comprador' : contactList.role == 'comprador', 'vendedor' : contactList.role == 'vendedor'}">
     {{ contactList.role }}
@@ -9,14 +12,25 @@
     <p v-else class="contact-type" style="background: lightcoral">desconocido</p>
   </ng-template>
 </div>
-
+<!-- Información del vehículo -->
 <div class="car-info">
-  <div *ngIf="contactList.car_make && contactList.car_model;else noCarInfo">
+  <!-- Comprobamos si se dispone de la infomación del vehículo -->
+  <div *ngIf="contactList.car_make;else noCarMake">
+    <span>Marca:</span>
     <p class="card-text">{{ contactList.car_make }}</p>
+  </div>
+  <div *ngIf="contactList.car_model;else noCarModel">
+    <span>Modelo:</span>
     <p class="card-text">{{ contactList.car_model }}</p>
   </div>
-  <ng-template #noCarInfo>
-    <p v-else>Desconocemos la marca</p>
-    <p v-else>Desconocemos el modelo</p>
+  <!-- Si no disponemos de la información de la marca -->
+  <ng-template #noCarMake>
+    <span>Marca:</span>
+    <p v-else class="card-unknown">Desconocida</p>
+  </ng-template>
+  <!-- Si no disponemos de la información del modelo -->
+  <ng-template #noCarModel>
+    <span>Modelo:</span>
+    <p v-else class="card-unknown">Desconocido</p>
   </ng-template>
 </div>

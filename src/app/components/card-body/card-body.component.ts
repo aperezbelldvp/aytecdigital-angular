@@ -8,6 +8,7 @@ import { Contact } from 'src/app/models/contacts-model';
 })
 export class CardBodyComponent implements OnInit {
 
+  /* Obtenemos el contacto desde la clase padre (card-list) */
   @Input() contactList : Contact
 
   constructor() { }
