@@ -1,12 +1,6 @@
 img {
-  height: 150px;
-  width: 250px;
-  object-fit: scale-down;
-}
-
-span {
-  font-size: 4rem;
-  color: white;
+  margin-top: -115px;
+  margin-bottom: -150px;
 }
 
 .header {
