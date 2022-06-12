@@ -6,3 +6,39 @@ img {
 .header {
   background-color: #e53935;
 }
+
+@media (max-width: 785px) {
+  img {
+    margin-top: -100px;
+    margin-bottom: -120px;
+  }
+}
+
+@media (max-width: 650px) {
+  img {
+    margin-top: -70px;
+    margin-bottom: -110px;
+  }
+}
+
+@media (max-width: 570px) {
+  img {
+    margin-top: -70px;
+    margin-bottom: -100px;
+  }
+}
+
+@media (max-width: 495px) {
+  img {
+    margin-top: -60px;
+    margin-bottom: -80px;
+  }
+}
+
+@media (max-width: 420px) {
+  img {
+    margin-top: -40px;
+    margin-bottom: -60px;
+  }
+}
+
